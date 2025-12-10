@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Merrys Birthday Magazine</title>
+    <meta name="description" content="device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="./turnjs4/extras/jquery.min.1.7.js"></script>
+    <script src="./turnjs4/extras/modernizr.2.5.3.min.js"></script>
+    <script src="./turnjs4/lib/hash.js"></script>
+    <script src="./turnjs4/lib/turn.js"></script>
+</head>
+
+<body>
+    <button id="fullscreenBtn" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">⤢</button>
+    <div id="flipbook">
+        <div class="hard">
+            <h1>My Gallery
+                <h1><br>
+                    <small>Merry</small>
+        </div>
+        <div class="into">
+            <h1>Merry</h1>
+            <p>Merry</p>
+        </div>
+        <div>
+            <small class="days"> Day 1 of 30</small>
+            <img src="Images/day1.jpg" alt="Day1" />
+        </div>
+        <div>
+            <small class="days"> Day 2 of 30</small>
+            <img src="Images/day2.jpg" alt="Day2" />
+        </div>
+        <div>
+            <small class="days"> Day 3 of 30</small>
+            <img src="Images/day3.jpg" alt="Day3" />
+        </div>
+        <div>
+            <small class="days"> Day 4 of 30</small>
+            <img src="Images/day4.jpg" alt="Day4" />
+        </div>
+        <div>
+            <small class="days"> Day 5 of 30</small>
+            <img src="Images/may.jpg" alt="Day5" />
+        </div>
+        <div>
+            <small class="days"> Day 6 of 30</small>
+            <img src="Images/june.jpg" alt="Day6" />
+        </div>
+        <div>
+            <small class="days"> Day 7 of 30</small>
+            <img src="Images/july.jpg" alt="Day7" />
+        </div>
+        <div>
+            <small class="days"> Day 8 of 30</small>
+            <img src="Images/august.jpg" alt="Day8" />
+        </div>
+        <div>
+            <small class="days"> Day 9 of 30</small>
+            <img src="Images/september.jpg" alt="Day9" />
+        </div>
+        <div>
+            <small class="days"> Day 10 of 30</small>
+            <img src="Images/october.jpg" alt="Day10" />
+        </div>
+        <div>
+            <small class="days"> Day 11 of 30</small>
+            <img src="Images/november.jpg" alt="Day11" />
+        </div>
+        <div>
+            <small class="days"> Day 12 of 30</small>
+            <img src="Images/december.jpg" alt="Day12" />
+        </div>
+        <div>
+            <small class="days"> Day 13 of 30</small>
+            <img src="Images/december.jpg" alt="Day13" />
+        </div>
+        <div>
+            <small class="days"> Day 14 of 30</small>
+            <img src="Images/december.jpg" alt="Day14" />
+        </div>
+        <div>
+            <small class="days"> Day 15 of 30</small>
+            <img src="Images/december.jpg" alt="Day15" />
+        </div>
+        <div>
+            <small class="days"> Day 16 of 30</small>
+            <img src="Images/december.jpg" alt="Day16" />
+        </div>
+        <div>
+            <small class="days"> Day 17 of 30</small>
+            <img src="Images/december.jpg" alt="Day17" />
+        </div>
+        <div>
+            <small class="days"> Day 18 of 30</small>
+            <img src="Images/december.jpg" alt="Day18" />
+        </div>
+        <div>
+            <small class="days"> Day 19 of 30</small>
+            <img src="Images/december.jpg" alt="Day19" />
+        </div>
+        <div>
+            <small class="days"> Day 20 of 30</small>
+            <img src="Images/december.jpg" alt="Day20" />
+        </div>
+        <div>
+            <small class="days"> Day 21 of 30</small>
+            <img src="Images/december.jpg" alt="Day21" />
+        </div>
+        <div>
+            <small class="days"> Day 22 of 30</small>
+            <img src="Images/december.jpg" alt="Day22" />
+        </div>
+        <div>
+            <small class="days"> Day 23 of 30</small>
+            <img src="Images/december.jpg" alt="Day23" />
+        </div>
+        <div>
+            <small class="days"> Day 24 of 30</small>
+            <img src="Images/december.jpg" alt="Day24" />
+        </div>
+        <div>
+            <small class="days"> Day 25 of 30</small>
+            <img src="Images/december.jpg" alt="Day25" />
+        </div>
+        <div>
+            <small class="days"> Day 26 of 30</small>
+            <img src="Images/december.jpg" alt="Day26" />
+        </div>
+        <div>
+            <small class="days"> Day 27 of 30</small>
+            <img src="Images/december.jpg" alt="Day27" />
+        </div>
+        <div>
+            <small class="days"> Day 28 of 30</small>
+            <img src="Images/december.jpg" alt="Day28" />
+        </div>
+        <div>
+            <small class="days"> Day 29 of 30</small>
+            <img src="Images/december.jpg" alt="Day29" />
+        </div>
+        <div>
+            <small class="days"> Day 30 of 30</small>
+            <img src="Images/december.jpg" alt="Day30" />
+        </div>
+        <div class="hard"></div>
+        <div class="hard">Thank You<small>Merry</small></div>
+    </div>
+    <script>
+        (function() {
+            var $flipbook = $("#flipbook");
+
+            // Initialize Turn.js with defaults; we'll resize right after
+            $flipbook.turn({
+                width: 1200,
+                height: 650,
+                autoCenter: true,
+                acceleration: true,
+                gradients: true,
+                elevation: 50,
+                display: 'double'
+            });
+
+            // Apply initial display mode so small phones start single-page
+            try {
+                var startMode = (window.innerWidth <= 480) ? 'single' : 'double';
+                $flipbook.turn('display', startMode);
+            } catch (e) {
+                // ignore if turn not ready yet
+            }
+
+            // --- Fullscreen helpers (with vendor fallbacks) ---
+            function isFullScreen() {
+                return document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+            }
+
+            function enterFullScreen(el) {
+                if (el.requestFullscreen) el.requestFullscreen();
+                else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+                else if (el.mozRequestFullScreen) el.mozRequestFullScreen();
+                else if (el.msRequestFullscreen) el.msRequestFullscreen();
+            }
+
+            function exitFullScreen() {
+                if (document.exitFullscreen) document.exitFullscreen();
+                else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+                else if (document.msExitFullscreen) document.msExitFullscreen();
+            }
+
+            // Toggle fullscreen when button clicked
+            $("#fullscreenBtn").on('click', function() {
+                var fb = document.getElementById('flipbook');
+                if (isFullScreen()) exitFullScreen();
+                else enterFullScreen(fb);
+            });
+
+            // Update button text/icon when fullscreen changes
+            $(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+                if (isFullScreen()) {
+                    $('#fullscreenBtn').text('×').attr('title', 'Exit Fullscreen');
+                } else {
+                    $('#fullscreenBtn').text('⤢').attr('title', 'Enter Fullscreen');
+                }
+                // Slight delay then resize turn.js
+                setTimeout(updateFlipbookSize, 80);
+            });
+
+            // --- Resize / Orientation handling ---
+            function debounce(fn, wait) {
+                var t;
+                return function() {
+                    var ctx = this,
+                        args = arguments;
+                    clearTimeout(t);
+                    t = setTimeout(function() {
+                        fn.apply(ctx, args);
+                    }, wait);
+                };
+            }
+
+            function computeDisplayMode() {
+                // Only small phones should use single-page. Tablets and larger remain double.
+                var w = window.innerWidth || document.documentElement.clientWidth;
+                // Small phones threshold (CSS pixels)
+                if (w <= 480) return 'single';
+                return 'double';
+            }
+
+            function updateFlipbookSize() {
+                var fb = document.getElementById('flipbook');
+                if (!fb) return;
+
+                // Compute available size for the flipbook based on CSS rules
+                var rect = fb.getBoundingClientRect();
+                var w = Math.max(200, Math.floor(rect.width));
+                var h = Math.max(150, Math.floor(rect.height));
+
+                // Update Turn.js display mode if needed
+                var desiredDisplay = computeDisplayMode();
+                try {
+                    // only change if different to avoid unnecessary redraws
+                    if ($flipbook.data('turn') && $flipbook.turn('options').display !== desiredDisplay) {
+                        $flipbook.turn('display', desiredDisplay);
+                    }
+                } catch (e) {
+                    try {
+                        $flipbook.turn('display', desiredDisplay);
+                    } catch (err) {}
+                }
+
+                // Tell Turn.js to resize to the container's pixel size
+                try {
+                    $flipbook.turn('size', w, h);
+                } catch (e) {
+                    // ignore
+                }
+            }
+
+            // Debounced handlers for resize and orientation changes
+            var debouncedUpdate = debounce(updateFlipbookSize, 120);
+            window.addEventListener('resize', debouncedUpdate);
+            window.addEventListener('orientationchange', function() {
+                setTimeout(updateFlipbookSize, 180);
+            });
+
+            // Call once after init (give Turn.js a moment to initialize)
+            setTimeout(updateFlipbookSize, 120);
+
+            // Optional: double-click flipbook to toggle fullscreen
+            $flipbook.on('dblclick', function() {
+                var fb = document.getElementById('flipbook');
+                if (isFullScreen()) exitFullScreen();
+                else enterFullScreen(fb);
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
