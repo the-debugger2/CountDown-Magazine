@@ -6,6 +6,11 @@
     font-family: 'poppins', sans-serif;
 }
 
+html,
+body {
+    max-width: 100%;
+}
+
 body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
@@ -15,6 +20,26 @@ body {
     padding: 20px;
     min-width: 100vw;
     flex-direction: column;
+    overflow-x: hidden;
+}
+
+
+/* Header above the flipbook */
+
+.top {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.top h1 {
+    color: white;
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 :root {
@@ -25,10 +50,8 @@ body {
 #flipbook {
     background: white;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    width: min(var(--flipbook-max-width), 95vw);
-    height: min(var(--flipbook-max-height), 90vh);
-    max-width: var(--flipbook-max-width);
-    max-height: var(--flipbook-max-height);
+    width: min(1200px, 95vw);
+    height: min(650px, 85vh);
     border-radius: 20px;
 }
 
@@ -91,12 +114,12 @@ body {
 }
 
 .page-text .text-inner {
-    max-width: 70%;
+    max-width: 85%;
     text-align: center;
-    padding: 24px;
-    border-radius: 14px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.75));
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 28px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .page-text h2 {
@@ -106,9 +129,9 @@ body {
 }
 
 .page-text p {
-    font-size: clamp(14px, 1.9vw, 18px);
+    font-size: clamp(14px, 2vw, 18px);
     color: #444;
-    line-height: 1.45;
+    line-height: 1.6;
 }
 
 #flipbook>div small {
@@ -147,30 +170,26 @@ body {
 }
 
 .days {
-    font-size: clamp(12px, 1.5vw, 16px);
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-    padding-top: 10px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: clamp(11px, 1.4vw, 14px);
+    color: white;
 }
 
 .Quote {
+    padding-left: 30px;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 90%;
-    transform: translateY(-50%);
-    z-index: 3;
-    display: block;
-    width: auto;
-    padding: 12px 16px;
-    margin: 0 auto;
+    bottom: 40px;
+    width: 85%;
     text-align: center;
-    font-size: clamp(14px, 2vw, 20px);
-    color: rgba(164, 164, 164, 0.95);
+    font-size: clamp(13px, 2vw, 18px);
+    color: white;
     font-weight: 600;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-    pointer-events: none;
+    text-shadow: 0 5px 12px rgba(0, 0, 0, 0.7);
+    line-height: 1.4;
 }
 
 #flipbook div.hard {
@@ -194,8 +213,8 @@ body {
 
 #fullscreenBtn {
     position: fixed;
-    top: 16px;
-    right: 16px;
+    top: 20px;
+    right: 20px;
     z-index: 9999;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
@@ -254,8 +273,8 @@ body {
 
 @media (max-width: 992px) {
     #flipbook {
-        width: 700px;
-        height: 450px;
+        width: 95vw;
+        height: 70vh;
     }
     #flipbook div.hard {
         font-size: 26px;
@@ -269,9 +288,20 @@ body {
 /* Mobile large */
 
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
     #flipbook {
         width: 95vw;
-        height: calc(95vw * 0.6);
+        height: 75vh;
+        border-radius: 12px;
+    }
+    .page-text .text-inner {
+        max-width: 90%;
+        padding: 18px;
+    }
+    .top h1 {
+        font-size: 22px;
     }
     #flipbook div.hard {
         font-size: 22px;
@@ -292,5 +322,9 @@ body {
     }
     #flipbook>div small {
         font-size: 11px;
+    }
+    #fullscreenBtn {
+        font-size: 22px;
+        padding: 8px 10px;
     }
 }
